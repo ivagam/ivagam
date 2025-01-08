@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ArbiTapApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="max-w-lg  w-100 mx-auto">
+  <app-root></app-root>
+  <script>
+    const tabMe = (e) => {
+      e.preventDefault();
+      animateButton();
+    };
+    const animateButton = () => {
+      const userTapButtonRef= document.getElementById('userTapButton')
+      userTapButtonRef.classList.add("scale-95");
+      setTimeout(() => {
+        userTapButtonRef.classList.remove("scale-95");
+      }, 150);
+    };
+  </script>
+</body>
+</html>
